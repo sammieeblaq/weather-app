@@ -1,21 +1,14 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import cardImage from "../../assets/images/marc-babin.jpg";
 
 const eventsCard = props => (
-    <div>
-        <Card style={{ width: "20rem" }}>
-            <Card.Img variant="top" src={"../../public/images/elon-musk.jpg"} alt="Card Image" />
-            <Card.Body>
-                <Card.Title>Wizkid Concert</Card.Title>
-                <Card.Text>
-                    A simple description of the particular event occuring.
-                </Card.Text>
-                <Card.Text>
-                    27th September, 2019
-                </Card.Text>
-                <Button variant="secondary">Book Event</Button>
-            </Card.Body>
-        </Card>
+    <div className="card" style={{width: "18rem"}}>
+        <img src={cardImage} className="card-img-top" alt="..." style={{ height: "12rem" }} />
+        <div className="card-body">
+            <h5 className="card-title">Google Meetup</h5>
+            <p>This is s simple Event Card</p>
+            <a href="/" className="btn btn-secondary">Book</a>
+        </div>
     </div>
 )
 

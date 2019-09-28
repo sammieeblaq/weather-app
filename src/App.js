@@ -1,18 +1,17 @@
 import React, { Component } from "react";
-import Button from "./components/Buttons/Buttons";
+// import Button from "./components/Buttons/Buttons";
 
 // import AppRouter from "./router/AppRouter";
-import EventCard from "./components/EventsCard/EventsCard";
+// import EventCard from "./components/EventsCard/EventsCard";
 
 
 class App extends Component {
 
 	render() {
 		return (
-			<div>
+			<div>s
 				{/* <AppRouter /> */}
-				<Button />
-				<EventCard />
+				{/* <EventCard /> */}
 			</div>
 		)
 	}

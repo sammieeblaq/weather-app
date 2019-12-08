@@ -1,20 +1,9 @@
-import React, { Component } from "react";
-// import Button from "./components/Buttons/Buttons";
+import React from "react";
 
-// import AppRouter from "./router/AppRouter";
-// import EventCard from "./components/EventsCard/EventsCard";
-
-
-class App extends Component {
-
-	render() {
-		return (
-			<div>s
-				{/* <AppRouter /> */}
-				{/* <EventCard /> */}
-			</div>
-		)
-	}
-}
+const App = () => (
+    <>
+        <h1>Hello World</h1>
+    </>
+)
 
 export default App;

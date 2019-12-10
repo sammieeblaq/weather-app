@@ -17,31 +17,41 @@ const App = () => {
     const [temp_min, setTemp_min] = useState("");
     const [temp_max, setTemp_max] = useState("");
     const [temp, setTemp] = useState("");
+    // const [error, setError] = useState(false);
 
 
-    const getWeather = async () => {
-        const api_call = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${api_key}`);
-        const response = await api_call;
-        console.log(response);
-        // return response;
-        setCity(response.data.name);
-        setCountry(response.data.sys.country);
-        setTemp(response.data.main.temp);
-        setTemp_max(response.data.main.temp_max);
-        setTemp_min(response.data.main.temp_min);
-        setDescription(response.data.weather[0].description);
+    const getWeather = async (e) => {
+        e.preventDefault();
+
+        const City = e.target.elements.city.value;
+        const Country = e.target.elements.country.value;
+
+        if (city && country) {
+            const api_call = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${City},${Country}&appid=${api_key}`);
+            const response = await api_call;
+            // console.log(response);
+            // return response;
+            setCity(response.data.name)
+            setCountry(response.data.sys.country);
+            setTemp(response.data.main.temp);
+            setTemp_max(response.data.main.temp_max);
+            setTemp_min(response.data.main.temp_min);
+            setDescription(response.data.weather[0].description);
+            console.log(response);
+
+        }
     }
     
     return (
         <div className="App">
             <Weather 
+                loadWeather = {getWeather}
                 city = {city} 
                 country = {country} 
                 temp = {temp} 
                 temp_max = {temp_max}
                 temp_min = {temp_min}
                 description = {description}
-                loadWeather = {getWeather}
             />
         </div>
     )

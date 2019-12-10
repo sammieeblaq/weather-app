@@ -15,16 +15,15 @@ const Weather =
         return (
             <>
                 <div className="box">
-                    <div>
+                    <form onSubmit={loadWeather}>
+                        <input type="text" name="city" placeholder="Enter city"/>
                         <input type="text" name="country" placeholder="Enter country" />
-                        <input type="text" name="city"
-                        placeholder="Enter city" />
-                        <span className="button" onClick={() => loadWeather}><button type="submit" value="search">Get Weather</button></span>
-                    </div>
+                        <span className="button"><button type="submit" value="search">Get Weather</button></span>
+                    </form>
                 </div>
                 <div className="display-weather">
                     <div>
-                        { temp ? <span>{ Math.floor(temp) }&deg;</span> : null }
+                        { temp ? <span><h2>{ Math.floor(temp) }&deg;</h2></span> : null }
                         { city && country ? <span><h2>{ city }, { country }</h2></span> : null }
                         { temp_min && temp_max 
                             ? <span><h3>{ Math.floor(temp_min) }&deg; - { Math.floor(temp_max) }&deg;</h3></span>

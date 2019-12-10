@@ -23,11 +23,11 @@ const App = () => {
     const getWeather = async (e) => {
         e.preventDefault();
 
-        const City = e.target.elements.city.value;
-        const Country = e.target.elements.country.value;
-
+        const city = e.target.elements.city.value;
+        const country = e.target.elements.country.value;
+        // console.log("got here")
         if (city && country) {
-            const api_call = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${City},${Country}&appid=${api_key}`);
+            const api_call = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${api_key}`);
             const response = await api_call;
             // console.log(response);
             // return response;
@@ -41,7 +41,6 @@ const App = () => {
 
         }
     }
-    
     return (
         <div className="App">
             <Weather 

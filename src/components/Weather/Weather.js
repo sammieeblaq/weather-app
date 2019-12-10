@@ -16,11 +16,11 @@ const Weather =
         return (
             <>
                 <div className="box">
-                    <div>
+                    <form onSubmit={loadWeather}>
                         <input type="text" placeholder="Enter country" />
                         <input type="text" placeholder="Enter city" />
                         <span className="button" onClick={loadWeather}><button type="submit" value="search">Get Weather</button></span>
-                    </div>
+                    </form>
                 </div>
                 <div className="display-weather">
                     <div>

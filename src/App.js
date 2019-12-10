@@ -31,7 +31,6 @@ const App = () => {
         setTemp_min(response.data.main.temp_min);
         setDescription(response.data.weather[0].description);
     }
-    getWeather();
     
     return (
         <div className="App">
@@ -42,6 +41,7 @@ const App = () => {
                 temp_max = {temp_max}
                 temp_min = {temp_min}
                 description = {description}
+                loadWeather = {getWeather}
             />
         </div>
     )

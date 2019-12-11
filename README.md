@@ -1,4 +1,4 @@
-The project is a Weather Application built using ReactJs and Axios.
+The project is a Weather Application built using ReactJs, axios and openweathermap api..
 Axios is used to fetch the external data displayed in the frontend UI written in React using Hooks.
 
 The project was written using Hooks and not component state.

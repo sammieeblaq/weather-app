@@ -15,12 +15,6 @@
    text-decoration-color: whitesmoke;
 } */
 
-.box {
-   display: flex;
-   justify-content: center;
-   margin: 50px;
-}
-
 .display-weather {
    display: flex;
    justify-content: center;

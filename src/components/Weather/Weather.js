@@ -14,13 +14,6 @@ const Weather =
     }) => {
         return (
             <>
-                <div className="box">
-                    <form onSubmit={loadWeather}>
-                        <input type="text" name="city" placeholder="Enter city"/>
-                        <input type="text" name="country" placeholder="Enter country" />
-                        <span className="button"><button type="submit" value="search">Get Weather</button></span>
-                    </form>
-                </div>
                 <div className="display-weather">
                     <div>
                         { temp ? <span><h2>{ Math.floor(temp) }&deg;</h2></span> : null }

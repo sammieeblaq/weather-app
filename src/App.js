@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import Weather from "./components/Weather/Weather";
+import Form from "./components/Form/Form";
 
 const api_key = "e876ad8eedce4610f913d17aaaadae72"
 
@@ -44,7 +45,6 @@ const App = () => {
     return (
         <div className="App">
             <Weather 
-                loadWeather = {getWeather}
                 city = {city} 
                 country = {country} 
                 temp = {temp} 
@@ -52,6 +52,7 @@ const App = () => {
                 temp_min = {temp_min}
                 description = {description}
             />
+            <Form loadWeather={getWeather} />
         </div>
     )
 }
